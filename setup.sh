@@ -8,6 +8,7 @@ if [[ "$ISSUPPORTED" != "True" ]]; then
 fi
 
 VERSION=1.17.0
+
 DRILL_BASE_DIR=/var/lib/drill
 
 if [[ -n $1 ]]; then
@@ -30,11 +31,13 @@ mkdir -p $FULL_PATH/jars/3rdparty
 cd $FULL_PATH/jars/3rdparty
 
 wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-azure/3.2.1/hadoop-azure-3.2.1.jar
+
 wget https://repo1.maven.org/maven2/com/microsoft/azure/azure-storage/8.6.0/azure-storage-8.6.0.jar
 
 cd $FULL_PATH/jars
 
 wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-azure-datalake/3.2.1/hadoop-azure-datalake-3.2.1.jar
+
 wget https://repo1.maven.org/maven2/com/microsoft/azure/azure-data-lake-store-sdk/2.3.8/azure-data-lake-store-sdk-2.3.8.jar
 
 cp /usr/lib/hdinsight-logging/microsoft-log4j-etwappender-*.jar $FULL_PATH/jars/classb
